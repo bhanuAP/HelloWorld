@@ -7,10 +7,8 @@ app.use((req, res, next) => {
   next();
 });
 
-const getHello = function(req, res) {
-  res.send("Hello, How are you?");
-}
-
-app.get('/hello', getHello);
+app.get('/', (req, res) => {
+  res.send("Hello");
+});
 
 module.exports = app;
